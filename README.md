@@ -1,2 +1,2 @@
 # csgc
-Package to calculate centred subgraph counts
+R package to calculate centred subgraph counts
