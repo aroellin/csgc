@@ -23,7 +23,7 @@ fit.sbm = function(A, max.k=10) {
     message("----")
     message("Groups = ", k)
     
-    print(csgc(A,K.hat[mship,mship]))
+    print(csgc(A,K.hat[mship,mship])$z)
   }
   
   return(sbm)

@@ -71,8 +71,13 @@ csgc = function(A, P) {
   z.3path = V.3path / sqrt(vr.3path)
   z.3star = V.3star / sqrt(vr.3star)
  
-  ans = c(z.edge, z.twostar, z.triangle, z.4cycle, z.3path, z.3star)
-  names(ans) = c("z.edge", "z.twostar", "z.triangle", "z.4cycle", "z.3path", "z.3star")
+  V = c(V.edge, V.twostar, V.triangle, V.4cycle, V.3path, V.3star)
+  names(V) = c("V.edge", "V.twostar", "V.triangle", "V.4cycle", "V.3path", "V.3star")
+  vr = c(vr.edge, vr.twostar, vr.triangle, vr.4cycle, vr.3path, vr.3star)
+  names(vr) = c("var.edge", "var.twostar", "var.triangle", "var.4cycle", "var.3path", "var.3star")
+  z = V/sqrt(vr)
+  names(z) = c("z.edge", "z.twostar", "z.triangle", "z.4cycle", "z.3path", "z.3star")
+  ans = list(z=z, V=V, var=vr)
   return(ans)
 }
 
