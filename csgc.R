@@ -4,9 +4,14 @@ trace = function(A) return(sum(diag(A)))
 
 # Calculate basic centred subgraph counts
 csgc = function(A, P) {
+#
+# INPUT
 # A     = adjacency matrix
-# P     = theoretical connection probabilityes
+# P     = hypothesised connection probabilities
 # A and P need to have the same dimensions
+#
+# OUTPUT
+# A named vector with basic centred subgraph count statistics
   
   # Clean up A and P
   diag(A) = 0 # remove loops
